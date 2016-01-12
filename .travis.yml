@@ -1,0 +1,9 @@
+# .travis.yml for R CDADataSims
+
+language: r
+warnings_are_errors: true
+sudo: required
+
+notifications:
+  email:
+    - ddrackham@gmail.com
