@@ -1,7 +1,7 @@
 #' Hartz Roussos (2008) Q-matrix
 #' 
 #' Simulates the Hartz Roussos Q-matrix from "The Fusion Model for Skills Diagnosis: Blending Theory with Practicality" (2008)
-#' @keywords q-matrix
+#' @keywords q-matrix hartz roussos
 #' @export
 #' @examples
 #' q <- hartzRoussosQ()
