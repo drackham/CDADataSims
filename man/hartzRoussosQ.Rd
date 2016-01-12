@@ -13,5 +13,7 @@ Simulates the Hartz Roussos Q-matrix from "The Fusion Model for Skills Diagnosis
 q <- hartzRoussosQ()
 
 }
+\keyword{hartz}
 \keyword{q-matrix}
+\keyword{roussos}
 
