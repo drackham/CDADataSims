@@ -1,4 +1,10 @@
+Travis Master Status
 [![Travis-CI Build Status](https://travis-ci.org/drackham/CDADataSims.svg?branch=master)](https://travis-ci.org/drackham/CDADataSims)
+
+Travis Dev Status
+[![Travis-CI Build Status](https://travis-ci.org/drackham/CDADataSims.svg?branch=develop)](https://travis-ci.org/drackham/CDADataSims)
+
+
 ## Synopsis
 
 Cognitive Diagnostic Assessment model data simulations.
