@@ -1,7 +1,7 @@
-Master:
+## Master
 [![Travis-CI Build Status](https://travis-ci.org/drackham/CDADataSims.svg?branch=master)](https://travis-ci.org/drackham/CDADataSims)
 
-Develop:
+## Develop
 [![Travis-CI Build Status](https://travis-ci.org/drackham/CDADataSims.svg?branch=develop)](https://travis-ci.org/drackham/CDADataSims)
 
 
