@@ -7,15 +7,29 @@
 hartzRoussosData()
 }
 \arguments{
-\item{j}{Examinees}
+\item{JJ}{Number of examinees}
 
-\item{i}{Items}
+\item{j}{Examinee j}
 
-\item{k}{skills}
+\item{II}{Number of ittems}
+
+\item{i}{Item i}
+
+\item{KK}{Number of skills}
+
+\item{k}{Skill k}
+
+\item{alphaK}{Skill mastery proportion vector}
+
+\item{alphaJK}{Examinee skill mastery profile}
 
 \item{x}{response matrix}
 
-\item{pi}{Probability that an examinee having mastered all the Q required skills for item i will correctly apply all the skills when solving item i}
+\item{pi}{Probability that an examinee having mastered all the Q required skills for item i will correctly apply all the skills when solving item i.}
+
+\item{r}{Item discrimination}
+
+\item{c}{Item difficulty}
 }
 \description{
 Simulates the Hartz Roussos data from "The Fusion Model for Skills Diagnosis: Blending Theory with Practicality" (2008)
