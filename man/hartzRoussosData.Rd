@@ -11,7 +11,7 @@ hartzRoussosData()
 
 \item{j}{Examinee j}
 
-\item{II}{Number of ittems}
+\item{II}{Number of items}
 
 \item{i}{Item i}
 
@@ -27,9 +27,11 @@ hartzRoussosData()
 
 \item{pi}{Probability that an examinee having mastered all the Q required skills for item i will correctly apply all the skills when solving item i.}
 
-\item{r}{Item discrimination}
+\item{iParamsLow}{Matrix of item parameters for ideal low complexity model}
 
-\item{c}{Item difficulty}
+\item{r}{Item discrimination r}
+
+\item{c}{Item difficulty c}
 }
 \description{
 Simulates the Hartz Roussos data from "The Fusion Model for Skills Diagnosis: Blending Theory with Practicality" (2008)
