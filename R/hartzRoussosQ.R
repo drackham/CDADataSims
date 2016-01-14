@@ -1,12 +1,12 @@
 #' Hartz Roussos (2008) Q-matrix
-#' 
+#'
 #' Simulates the Hartz Roussos Q-matrix from "The Fusion Model for Skills Diagnosis: Blending Theory with Practicality" (2008)
 #' @keywords q-matrix hartz roussos
 #' @export
 #' @examples
-#' q <- hartzRoussosQ()
-#' 
-hartzRoussosQ <- function(){
+#' q <- hartzRoussosQLow()
+#'
+hartzRoussosQLow <- function(){
   q <- matrix (nrow=40, ncol=7) #Column 3 is evidence models
   #           1 2 3 4 5 6 7
   q[1,]  <- c(0,0,1,0,1,0,0)
@@ -19,8 +19,8 @@ hartzRoussosQ <- function(){
   q[8,]  <- c(0,0,1,0,1,0,0)
   q[9,]  <- c(0,0,1,0,1,0,0)
   q[10,] <- c(0,0,0,1,0,0,0)
-  
-  #           1 2 3 4 5 6 7  
+
+  #           1 2 3 4 5 6 7
   q[11,] <- c(0,0,0,0,0,1,0)
   q[12,] <- c(0,0,0,0,0,0,1)
   q[13,] <- c(1,0,0,1,0,0,1)
@@ -31,7 +31,7 @@ hartzRoussosQ <- function(){
   q[18,] <- c(1,0,1,0,0,1,1)
   q[19,] <- c(1,0,0,0,0,1,0)
   q[20,] <- c(1,0,0,0,0,0,0)
-  
+
   #           1 2 3 4 5 6 7
   q[21,] <- c(0,1,0,0,0,0,0)
   q[22,] <- c(0,0,0,0,0,1,0)
@@ -43,7 +43,7 @@ hartzRoussosQ <- function(){
   q[28,] <- c(0,1,1,1,0,0,0)
   q[29,] <- c(0,1,1,0,1,0,1)
   q[30,] <- c(0,0,1,0,0,0,1)
-  
+
   #           1 2 3 4 5 6 7
   q[31,] <- c(1,0,0,1,0,1,0)
   q[32,] <- c(0,1,0,1,0,0,0)

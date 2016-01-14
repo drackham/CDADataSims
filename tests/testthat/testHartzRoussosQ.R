@@ -1,6 +1,6 @@
 context("Check the Hartz Roussos Q matrix for correctness")
 
-q <- hartzRoussosQ()
+q <- hartzRoussosQLow()
 
 test_that ("Hartz Roussos Q is a matrix", {
   expect_that(q, is_a("matrix"))
