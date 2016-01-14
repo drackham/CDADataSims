@@ -22,7 +22,7 @@ test_that ("Hartz Roussos Q has correct marginal row sums", {
   expect_that (sum(q[8,]),  equals(2))
   expect_that (sum(q[9,]),  equals(2))
   expect_that (sum(q[10,]), equals(1))
-  
+
   expect_that (sum(q[11,]), equals(1))
   expect_that (sum(q[12,]), equals(1))
   expect_that (sum(q[13,]), equals(3))
@@ -33,7 +33,7 @@ test_that ("Hartz Roussos Q has correct marginal row sums", {
   expect_that (sum(q[18,]), equals(4))
   expect_that (sum(q[19,]), equals(2))
   expect_that (sum(q[20,]), equals(1))
-  
+
   expect_that (sum(q[21,]), equals(1))
   expect_that (sum(q[22,]), equals(1))
   expect_that (sum(q[23,]), equals(1))
@@ -44,7 +44,7 @@ test_that ("Hartz Roussos Q has correct marginal row sums", {
   expect_that (sum(q[28,]), equals(3))
   expect_that (sum(q[29,]), equals(4))
   expect_that (sum(q[30,]), equals(2))
-  
+
   expect_that (sum(q[31,]), equals(3))
   expect_that (sum(q[32,]), equals(2))
   expect_that (sum(q[33,]), equals(1))
