@@ -40,7 +40,7 @@ Simulates the Hartz Roussos data from "The Fusion Model for Skills Diagnosis: Bl
 data <- hartzRoussosData()
 }
 \author{
-Dave Rackham, \email{ddrackham@gmail.com}
+Dave Rackham \email{ddrackham@gmail.com}
 }
 \references{
 \url{http://onlinelibrary.wiley.com/doi/10.1002/j.2333-8504.2008.tb02157.x/abstract}

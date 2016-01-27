@@ -15,8 +15,9 @@
 #' @param iParamsLow Matrix of item parameters for ideal low complexity model
 #' @param r Item discrimination r
 #' @param c Item difficulty c
+#' @param eta Latent ability NOT included in the q-matrix
 #'
-#' @author Dave Rackham, \email{ddrackham@gmail.com}
+#' @author Dave Rackham \email{ddrackham@gmail.com}
 #' @references \url{http://onlinelibrary.wiley.com/doi/10.1002/j.2333-8504.2008.tb02157.x/abstract}
 #' @keywords hartz roussos
 #'
