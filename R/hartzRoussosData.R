@@ -99,9 +99,16 @@ hartzRoussosData <- function(){
   probCorrect <- matrix (nrow=JJ, ncol=II)
   for (j in 1:JJ){ # respondents
     for (i in 1:II){ # items
-      for (k in 1:KK){ # skills
-        probCorrect[j,i] <- iParamsLow[i,1] * prod( iParamsLow[i,k+1]^( (1-alphaJK[j,k]) * q[i,k] ) * ( 1 / (1 + exp (-1.7 * (10 - (-iParamsLow[i,9]) ) ) ) ) ) # -1.7 equates it to normal ogive
-      }
+      rVec <- iParamsLow[i,2:8]
+      rStar <- rVec^((1-alphaJK[j,])*q[i,])
+      c <- iParamsLow[i,9]
+      eta <- 0 #0 opens, 10 nullifies
+
+      piStar <- iParamsLow[i,1]
+      rStar <- prod(rStar)
+      rasch <- (1 / (1 + exp (-1.7 * (eta - (-c))))) # -1.7 equates it to normal ogive
+      probCorrect[j,i] <- piStar * rStar * rasch
+
     }
   }
 
