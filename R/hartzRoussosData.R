@@ -46,7 +46,7 @@ hartzRoussosData <- function(){
   # The Fusion Model for Skills Diagnosis: Blending Theory with Practicality" (2008). While
   # values are provided in the paper, QLow is NA for those cells.
 
-                      # pi   r1    r2    r3    r4     r5   r6    r7     c
+                      # pi*   r1    r2    r3    r4     r5   r6    r7     c
   iParamsLow[1,] <-  c(.869, NA  , NA  , .447, NA  , .197, NA  , NA  , 1.128)
   iParamsLow[2,] <-  c(.834, .146, NA  , NA  , NA  , NA  , NA  , NA  , .156)
   iParamsLow[3,] <-  c(.936, .158, NA  , NA  , NA  , .122, NA  , NA  , 1.796)
@@ -58,7 +58,7 @@ hartzRoussosData <- function(){
   iParamsLow[9,] <-  c(.894, NA  , NA  , .493, NA  , .171, NA  , NA  , .45)
   iParamsLow[10,] <- c(.871, NA  , NA  , NA  , .153, NA  , NA  , NA  , .684)
 
-                      # pi   r1    r2    r3    r4     r5   r6    r7     c
+                      # pi*   r1    r2    r3    r4     r5   r6    r7     c
   iParamsLow[11,] <-  c(.861, NA  , NA  , NA  , NA  , NA  , .118, NA  , .281)
   iParamsLow[12,] <-  c(.907, NA  , NA  , NA  , NA  , NA  , NA  , .104, .642)
   iParamsLow[13,] <-  c(.953, .575, NA  , NA  , .167, NA  , NA  , .14 , 1.872)
@@ -70,7 +70,7 @@ hartzRoussosData <- function(){
   iParamsLow[19,] <-  c(.928, .516, NA  , NA  , NA  , NA  , .179, NA  , .171)
   iParamsLow[20,] <-  c(.962, .509, NA  , NA  , NA  , NA  , NA  , NA  , 1.371)
 
-                      # pi   r1    r2    r3    r4     r5   r6    r7     c
+                      # pi*   r1    r2    r3    r4     r5   r6    r7     c
   iParamsLow[21,] <-  c(.921, NA  , .18 , NA  , NA  , NA  , NA  , NA  , 1.671)
   iParamsLow[22,] <-  c(.911, NA  , NA  , NA  , NA  , NA  , .191, NA  , .057)
   iParamsLow[23,] <-  c(.856, NA  , NA  , NA  , .192, NA  , NA  , NA  , .267)
@@ -82,7 +82,7 @@ hartzRoussosData <- function(){
   iParamsLow[29,] <-  c(.903, NA  , .402, .496, NA  , .104, NA  , .181, 1.006)
   iParamsLow[30,] <-  c(.958, NA  , NA  , .419, NA  , NA  , NA  , .159, 1.429)
 
-                      # pi   r1    r2    r3    r4     r5   r6    r7     c
+                      # pi*   r1    r2    r3    r4     r5   r6    r7     c
   iParamsLow[31,] <-  c(.897, .191, NA  , NA  , .14 , NA  , .187, NA  , 1.831)
   iParamsLow[32,] <-  c(.801, NA  , .455, NA  , .186, NA  , NA  , NA  , 1.819)
   iParamsLow[33,] <-  c(.907, NA  , NA  , NA  , .157, NA  , NA  , NA  , .593)
