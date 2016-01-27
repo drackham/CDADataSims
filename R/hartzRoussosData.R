@@ -1,6 +1,7 @@
 #' Hartz Roussos (2008) Data simulation
 #'
 #' Simulates the Hartz Roussos data from "The Fusion Model for Skills Diagnosis: Blending Theory with Practicality" (2008)
+#'
 #' @param JJ Number of examinees
 #' @param j Examinee j
 #' @param II Number of items
@@ -14,11 +15,14 @@
 #' @param iParamsLow Matrix of item parameters for ideal low complexity model
 #' @param r Item discrimination r
 #' @param c Item difficulty c
+#'
+#' @author Dave Rackham, \email{ddrackham@gmail.com}
+#' @references \url{http://onlinelibrary.wiley.com/doi/10.1002/j.2333-8504.2008.tb02157.x/abstract}
 #' @keywords hartz roussos
-#' @export
+#'
 #' @examples
-#' @usage
-
+#' data <- hartzRoussosData()
+#' @export
 
 hartzRoussosData <- function(){
   set.seed(314159)

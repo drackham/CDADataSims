@@ -2,10 +2,10 @@
 #'
 #' Simulates the Hartz Roussos Q-matrix from "The Fusion Model for Skills Diagnosis: Blending Theory with Practicality" (2008)
 #' @keywords q-matrix hartz roussos
-#' @export
 #' @examples
 #' q <- hartzRoussosQLow()
 #'
+#' @export
 hartzRoussosQLow <- function(){
   q <- matrix (nrow=40, ncol=7) #Column 3 is evidence models
   #           1 2 3 4 5 6 7
