@@ -2,14 +2,17 @@ context("Check the Hartz Roussos data simulation for correctness")
 
 data <- hartzRoussosData()
 q <- hartzRoussosQLow()
+JJ <- 1500
+II <- 40
+KK <- 7
 
 test_that("alphaJK was simulated", {
   expect_that(data$alphaJK, is_a("matrix"))
 })
 
 test_that("alphaJK has the proper dimensions", {
-  expect_that(nrow(data$alphaJK), equals(1500))
-  expect_that(ncol(data$alphaJK), equals(7))
+  expect_that(nrow(data$alphaJK), equals(JJ))
+  expect_that(ncol(data$alphaJK), equals(KK))
 })
 
 test_that("alphaJK has correct proportions of mastery", {
@@ -23,7 +26,7 @@ test_that("alphaJK has correct proportions of mastery", {
 })
 
 test_that("iParamsLow has proper dimensions", {
-  expect_that(nrow(data$iParamsLow), equals(40))
+  expect_that(nrow(data$iParamsLow), equals(II))
   expect_that(ncol(data$iParamsLow), equals(9)) # 1 pi 7 r and 1 c = 9
 })
 
@@ -94,8 +97,8 @@ test_that("QLow and iParamsLow are congruent", {
   # If iParamsLow is correctly specified then multiplying the component vectors of
   # iParamsLow[,2:8] * Q should give the same marginal column sum
 
-  expect_that(nrow(q*data$iParamsLow[,c(2:8)]),equals(40))
-  expect_that(ncol(q*data$iParamsLow[,c(2:8)]),equals(7))
+  expect_that(nrow(q*data$iParamsLow[,c(2:8)]),equals(II))
+  expect_that(ncol(q*data$iParamsLow[,c(2:8)]),equals(KK))
 
   expect_that(sum(q[,1]*data$iParamsLow[,2], na.rm=TRUE), equals(3.643))
   expect_that(sum(q[,2]*data$iParamsLow[,3], na.rm=TRUE), equals(2.933))
@@ -104,4 +107,9 @@ test_that("QLow and iParamsLow are congruent", {
   expect_that(sum(q[,5]*data$iParamsLow[,6], na.rm=TRUE), equals(2.48)) # modified
   expect_that(sum(q[,6]*data$iParamsLow[,7], na.rm=TRUE), equals(2.229)) # modified
   expect_that(sum(q[,7]*data$iParamsLow[,8], na.rm=TRUE), equals(2.023))
+})
+
+test_that("y is correctly formatted", {
+  expect_that(nrow(data$y), equals(JJ))
+  expect_that(ncol(data$y), equals(II))
 })

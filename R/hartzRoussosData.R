@@ -7,7 +7,7 @@
 #' @param i Item i
 #' @param KK Number of skills
 #' @param k Skill k
-#' @param alphaK Skill mastery proportion vector
+#' @param alphaK Skill mastery population proportion vector
 #' @param alphaJK Examinee skill mastery profile
 #' @param x response matrix
 #' @param pi Probability that an examinee having mastered all the Q required skills for item i will correctly apply all the skills when solving item i.
@@ -17,7 +17,8 @@
 #' @keywords hartz roussos
 #' @export
 #' @examples
-#'
+#' @usage
+
 
 hartzRoussosData <- function(){
   set.seed(314159)
@@ -25,6 +26,7 @@ hartzRoussosData <- function(){
   JJ <- 1500
   II <- 40
   KK <- 7
+  q <- hartzRoussosQLow()
   alphaK <- c(.3, .4, .45, .5, .55, .6, .65)
   alphaJK <- matrix(nrow = JJ, ncol = KK)
   iParamsLow <- matrix(nrow = II, ncol = KK + 2) # n skills k + 1 r param and + 1 c param
@@ -37,8 +39,7 @@ hartzRoussosData <- function(){
 
   # Note 1/13/16: iParamsLow[4,9], [5,25], [6,13] and [6,20] are incorrectly specified in
   # The Fusion Model for Skills Diagnosis: Blending Theory with Practicality" (2008). While
-  # values are provided, QLow is 0 for those cells. To ensure the unit tests passed I multiplied
-  # the misspecified values by 0 so the link would remain clear.
+  # values are provided in the paper, QLow is NA for those cells.
 
                       # pi   r1    r2    r3    r4     r5   r6    r7     c
   iParamsLow[1,] <-  c(.869, NA  , NA  , .447, NA  , .197, NA  , NA  , 1.128)
@@ -88,7 +89,24 @@ hartzRoussosData <- function(){
   iParamsLow[39,] <-  c(.826, .13 , NA  , NA  , NA  , NA  , .105, .13 , 2.329)
   iParamsLow[40,] <-  c(.868, NA  , NA  , NA  , NA  , NA  , .19, .186 , 1.356)
 
+  # Generate the item responses
 
-  out <- list("alphaJK" = alphaJK, "iParamsLow" = iParamsLow)
+  probCorrect <- matrix (nrow=JJ, ncol=II)
+  for (j in 1:JJ){ # respondents
+    for (i in 1:II){ # items
+      for (k in 1:KK){ # skills
+        probCorrect[j,i] <- iParamsLow[i,1] * prod( iParamsLow[i,k+1]^( (1-alphaJK[j,k]) * q[i,k] ) * ( 1 / (1 + exp (-1.7 * (10 - (-iParamsLow[i,9]) ) ) ) ) ) # -1.7 equates it to normal ogive
+      }
+    }
+  }
+
+  y <- matrix (nrow=JJ, ncol=II)
+  for (j in 1:JJ){
+    for (i in 1:II){
+      y[j,i] <- rbinom(1,1,probCorrect[j,i])
+    }
+  }
+
+  out <- list("alphaJK" = alphaJK, "iParamsLow" = iParamsLow, "probCorrect" = probCorrect, "y" = y)
   return(out)
 }

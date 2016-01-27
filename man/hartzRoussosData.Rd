@@ -19,7 +19,7 @@ hartzRoussosData()
 
 \item{k}{Skill k}
 
-\item{alphaK}{Skill mastery proportion vector}
+\item{alphaK}{Skill mastery population proportion vector}
 
 \item{alphaJK}{Examinee skill mastery profile}
 
@@ -35,9 +35,6 @@ hartzRoussosData()
 }
 \description{
 Simulates the Hartz Roussos data from "The Fusion Model for Skills Diagnosis: Blending Theory with Practicality" (2008)
-}
-\examples{
-
 }
 \keyword{hartz}
 \keyword{roussos}
