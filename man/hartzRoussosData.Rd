@@ -32,6 +32,8 @@ hartzRoussosData()
 \item{r}{Item discrimination r}
 
 \item{c}{Item difficulty c}
+
+\item{eta}{Latent ability NOT included in the q-matrix}
 }
 \description{
 Simulates the Hartz Roussos data from "The Fusion Model for Skills Diagnosis: Blending Theory with Practicality" (2008)

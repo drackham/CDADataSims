@@ -102,7 +102,7 @@ hartzRoussosData <- function(){
       rVec <- iParamsLow[i,2:8]
       rStar <- rVec^((1-alphaJK[j,])*q[i,])
       c <- iParamsLow[i,9]
-      eta <- 0 #0 opens, 10 nullifies
+      eta <- 0 #0 widens, 10 nullifies
 
       piStar <- iParamsLow[i,1]
       rStar <- prod(rStar)
