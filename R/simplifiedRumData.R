@@ -27,7 +27,7 @@
 simplifiedRUMData <- function(){
   set.seed(314159)
 
-  kappa <- .7
+  # kappa <- .7
   J <- 1500
   I <- 40
   K <- 7
@@ -43,17 +43,17 @@ simplifiedRUMData <- function(){
   }
 
   # Use alphaJK to randomly generate continuous probablity of mastery
-  masteryJK <- matrix(nrow=J, ncol=K)
-  for (j in 1:J){
-    for(k in 1:K){
-      if(alphaJK[j,k] == 1){
-        masteryJK[j,k] <- round(runif(1, min = kappa, max = 1),3)
-      }
-      else{
-        masteryJK[j,k] <- round(runif(1, min = 0, max = kappa-.01),3)
-      }
-    }
-  }
+#   masteryJK <- matrix(nrow=J, ncol=K)
+#   for (j in 1:J){
+#     for(k in 1:K){
+#       if(alphaJK[j,k] == 1){
+#         masteryJK[j,k] <- round(runif(1, min = kappa, max = 1),3)
+#       }
+#       else{
+#         masteryJK[j,k] <- round(runif(1, min = 0, max = kappa-.01),3)
+#       }
+#     }
+#   }
 
   iParamsLow <- matrix(nrow = I, ncol = K) # n skills
 
