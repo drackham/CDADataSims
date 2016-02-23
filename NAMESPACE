@@ -2,3 +2,4 @@
 
 export(hartzRoussosData)
 export(hartzRoussosQLow)
+export(simplifiedRUMData)
