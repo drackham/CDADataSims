@@ -3,8 +3,6 @@
 
 ## Develop
 [![Travis-CI Build Status](https://travis-ci.org/drackham/CDADataSims.svg?branch=develop)](https://travis-ci.org/drackham/CDADataSims)
-
-## Coverage
 [![codecov.io](https://codecov.io/github/drackham/CDADataSims/coverage.svg?branch=develop)](https://codecov.io/github/drackham/CDADataSims?branch=develop)
 
 ## Synopsis
