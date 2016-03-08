@@ -7,3 +7,9 @@ sudo: required
 notifications:
   email:
     - ddrackham@gmail.com
+
+r_github_packages:
+  - jimhester/covr
+
+after_success:
+  - Rscript -e 'covr::codecov()'
