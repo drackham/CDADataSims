@@ -28,7 +28,7 @@ simplifiedRUMData <- function(){
   set.seed(314159)
 
   kappa <- .7
-  J <- 3000
+  J <- 10000
   I <- 40
   K <- 7
   q <- hartzRoussosQLow()
@@ -146,7 +146,8 @@ simplifiedRUMData <- function(){
   }
 
   out <- list("I" = I, "J" = J, "K" = K, "N" = N, "xMat" = xMat, "x" = x, "jj" = jj, "ii" = ii,
-              "probCorrect" = probCorrect, "alphaJK" = alphaJK, "kappa" = kappa, "iParamsLow" = iParamsLow)
+              "probCorrect" = probCorrect, "alphaJK" = alphaJK,
+              "masteryJK" = masteryJK, "kappa" = kappa, "iParamsLow" = iParamsLow)
 
   return(out)
 }
