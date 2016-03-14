@@ -27,14 +27,15 @@
 simplifiedRUMData <- function(){
   set.seed(314159)
 
-  kappa <- .7
-  J <- 10000
+  kappa <- .6
+  J <- 5000
   I <- 40
   K <- 7
   q <- hartzRoussosQLow()
 
   # Generate the final mastery proportions
-  alphaK <- c(.3, .4, .45, .5, .55, .6, .65)
+  # alphaK <- c(.3, .4, .45, .5, .55, .6, .65) # These may be too low. Too much noise??
+  alphaK <- c(.4, .5, .55, .6, .65, .7, .75)
   alphaJK <- matrix(nrow = J, ncol = K)
   for (j in 1:J){
     for (k in 1:K){
@@ -42,15 +43,29 @@ simplifiedRUMData <- function(){
     }
   }
 
-  # Use alphaJK to randomly generate continuous probablity of mastery
+  # Generate random matery probabilities
+  # The problem with this approach below is it prioritizes all latent classes equally
+  # Need to figure out how to weight them better?
+
+  # latentClasses <- generateLatentClasses(q)
   masteryJK <- matrix(nrow=J, ncol=K)
+
   for (j in 1:J){
+#     latentClass <- c(latentClasses[sample(nrow(latentClasses),size=1,replace=TRUE),])
+#     for(k in 1:K){
+#       if(latentClass[k]==0){
+#         masteryJK[j,k] <- rbeta(1,2,30)
+#       }
+#       else{
+#         masteryJK[j,k] <- rbeta(1,20,2)
+#       }
+#     }
     for(k in 1:K){
-      if(alphaJK[j,k] == 1){
-        masteryJK[j,k] <- round(runif(1, min = kappa, max = 1),3)
+      if(alphaJK[j,k]==0){
+        masteryJK[j,k] <- rbeta(1,2,30)
       }
       else{
-        masteryJK[j,k] <- round(runif(1, min = 0, max = kappa-.01),3)
+        masteryJK[j,k] <- rbeta(1,20,2)
       }
     }
   }
@@ -106,12 +121,12 @@ simplifiedRUMData <- function(){
   iParamsLow[39,] <-  c( .13 , 1.0 , 1.0 , 1.0 , 1.0 , .105, .13 )
   iParamsLow[40,] <-  c( 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , .19, .186 )
 
-
   probCorrect <- matrix (nrow=I, ncol=J)
   for (i in 1:I){ # respondents
     for (j in 1:J){ # items
       rVec <- iParamsLow[i,]
-      rStar <- rVec^((1-masteryJK[j,])*q[i,])  # Using mastery NOT alphaJK
+      rStar <- rVec^((1-masteryJK[j,])*q[i,])  # Using mastery
+      # rStar <- rVec^((1-alphaJK[j,])*q[i,])  # Using alphaJK
       probCorrect[i,j] <- round(prod(rStar),3)
 
     }
@@ -150,4 +165,27 @@ simplifiedRUMData <- function(){
               "masteryJK" = masteryJK, "kappa" = kappa, "iParamsLow" = iParamsLow)
 
   return(out)
+}
+
+generateLatentClasses <- function(qmatrix){
+
+  num_att = length(qmatrix[1,])
+  max_att = 2^num_att
+  latent_classes = matrix (data=NA, max_att, num_att)
+  m <- max_att
+
+  for (a in 1:num_att) {
+    m = m/2     # Number of repititions of entries 0 or 1 in one cycle
+    anf <- 1
+
+    while (anf < max_att) {
+      latent_classes[anf : (anf + m -1),a] <- 0
+      anf <- anf + m
+      latent_classes[anf : (anf + m -1),a] <- 1
+      anf <- anf + m
+    }
+  }
+  rownames(latent_classes) = paste("c", 1:max_att, sep= "")
+  latent_classes
+
 }
