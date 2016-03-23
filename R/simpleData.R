@@ -58,7 +58,6 @@ simpleData <- function(){
 
   iParamsLow <- matrix(nrow = I, ncol = K) # n skills
 
-                        # r1    r2    r3    r4     r5   r6    r7
   iParamsLow[1,] <-  c(0.10, 1)
   iParamsLow[2,] <-  c(0.05, 1)
   iParamsLow[3,] <-  c(0.25, 1)
@@ -70,7 +69,6 @@ simpleData <- function(){
   iParamsLow[9,] <-  c(0.33, 1)
   iParamsLow[10,] <- c(0.12, 1)
 
-  # r1    r2    r3    r4     r5   r6    r7
   iParamsLow[11,] <-  c(1, 0.02)
   iParamsLow[12,] <-  c(1, 0.38)
   iParamsLow[13,] <-  c(1, 0.11)
@@ -82,7 +80,6 @@ simpleData <- function(){
   iParamsLow[19,] <-  c(1, 0.18)
   iParamsLow[20,] <-  c(1, 0.21)
 
-  # r1    r2    r3    r4     r5   r6    r7
   iParamsLow[21,] <-  c(0.05, 0.28)
   iParamsLow[22,] <-  c(0.08, 0.03)
   iParamsLow[23,] <-  c(0.21, 0.48)

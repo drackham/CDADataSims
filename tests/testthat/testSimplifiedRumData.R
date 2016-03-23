@@ -2,7 +2,7 @@ context("Check the Simplified RUM data simulation for correctness")
 
 data <- simplifiedRUMData()
 q <- hartzRoussosQLow()
-J <- 10000
+J <- 5000
 I <- 40
 K <- 7
 

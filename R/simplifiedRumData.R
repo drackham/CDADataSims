@@ -34,8 +34,8 @@ simplifiedRUMData <- function(){
   q <- hartzRoussosQLow()
 
   # Generate the final mastery proportions
-  # alphaK <- c(.3, .4, .45, .5, .55, .6, .65) # These may be too low. Too much noise??
-  alphaK <- c(.4, .5, .55, .6, .65, .7, .75)
+  alphaK <- c(.3, .4, .45, .5, .55, .6, .65) # These may be too low. Too much noise??
+  # alphaK <- c(.4, .5, .55, .6, .65, .7, .75)
   alphaJK <- matrix(nrow = J, ncol = K)
   for (j in 1:J){
     for (k in 1:K){
