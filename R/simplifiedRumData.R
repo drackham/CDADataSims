@@ -122,8 +122,8 @@ simplifiedRUMData <- function(){
   iParamsLow[40,] <-  c( 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , .19, .186 )
 
   probCorrect <- matrix (nrow=I, ncol=J)
-  for (i in 1:I){ # respondents
-    for (j in 1:J){ # items
+  for (i in 1:I){ # items
+    for (j in 1:J){ # respondents
       rVec <- iParamsLow[i,]
       rStar <- rVec^((1-masteryJK[j,])*q[i,])  # Using mastery
       # rStar <- rVec^((1-alphaJK[j,])*q[i,])  # Using alphaJK
