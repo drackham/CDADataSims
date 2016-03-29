@@ -28,7 +28,7 @@ simpleData <- function(){
   set.seed(314159)
 
   kappa <- .6
-  J <- 500
+  J <- 1000
   I <- 30
   K <- 2
   q <- simpleQ()
