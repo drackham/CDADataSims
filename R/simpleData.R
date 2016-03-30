@@ -91,13 +91,13 @@ simpleData <- function(){
   iParamsLow[29,] <-  c(0.13, 0.26)
   iParamsLow[30,] <-  c(0.32, 0.18)
 
+  pi <- runif(30,0.85,.99)
+
   probCorrect <- matrix (nrow=I, ncol=J)
   for (i in 1:I){ # items
     for (j in 1:J){ # respondents
-      rVec <- iParamsLow[i,]
-      rStar <- rVec^((1-masteryJK[j,])*q[i,])  # Using mastery
-      probCorrect[i,j] <- round(prod(rStar),3)
-
+      rStar <- iParamsLow[i,]^((1-masteryJK[j,])*q[i,])  # Using mastery
+      probCorrect[i,j] <- pi[i] * round(prod(rStar),3)
     }
   }
 
