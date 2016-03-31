@@ -96,7 +96,8 @@ simpleData <- function(){
   probCorrect <- matrix (nrow=I, ncol=J)
   for (i in 1:I){ # items
     for (j in 1:J){ # respondents
-      rStar <- iParamsLow[i,]^((1-masteryJK[j,])*q[i,])  # Using mastery
+      # rStar <- iParamsLow[i,]^((1-masteryJK[j,])*q[i,])  # Using prob
+      rStar <- iParamsLow[i,]^((1-alphaJK[j,])*q[i,])  # Using mastery
       probCorrect[i,j] <- pi[i] * round(prod(rStar),3)
     }
   }
