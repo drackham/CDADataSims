@@ -60,7 +60,7 @@ simpleData <- function(){
 
   iParamsLow[1,] <-  c(0.10, 1)
   iParamsLow[2,] <-  c(0.05, 1)
-  iParamsLow[3,] <-  c(0.25, 1)
+  iParamsLow[3,] <-  c(0.18, 1)
   iParamsLow[4,] <-  c(0.02, 1)
   iParamsLow[5,] <-  c(0.11, 1)
   iParamsLow[6,] <-  c(0.10, 1)
