@@ -2,20 +2,27 @@
 #'
 #' Simulates the Hartz Roussos data from "The Fusion Model for Skills Diagnosis: Blending Theory with Practicality" (2008)
 #'
-#' @param JJ Number of examinees
-#' @param j Examinee j
-#' @param II Number of items
-#' @param i Item i
-#' @param KK Number of skills
-#' @param k Skill k
-#' @param alphaK Skill mastery population proportion vector
-#' @param alphaJK Examinee skill mastery profile
-#' @param x response matrix
-#' @param pi Probability that an examinee having mastered all the Q required skills for item i will correctly apply all the skills when solving item i.
-#' @param iParamsLow Matrix of item parameters for ideal low complexity model
-#' @param r Item discrimination r
-#' @param c Item difficulty c
-#' @param eta Latent ability NOT included in the q-matrix
+#' \section{\strong{Notation}}{
+#'  \describe{
+#'    \tabular{ll}{
+#'      JJ \tab Number of examinees \cr
+#'      II \tab Number of items \cr
+#'      KK \tab Number of skills \cr
+#'      j \tab Examinee j \cr
+#'      i \tab Item i \cr
+#'      k \tab Skill k \cr
+#'      alphaK \tab Skill mastery population proportion vector \cr
+#'      alphaJK \tab Examinee skill mastery profile \cr
+#'      x \tab response matrix \cr
+#'      pi \tab Probability that an examinee having mastered all the Q required skills for item i will correctly apply all the skills when solving item i \cr
+#'      iParamsLow \tab Matrix of item parameters for ideal low complexity model \cr
+#'      r \tab Item discrimination \cr
+#'      c \tab Item difficulty \cr
+#'      eta \tab Latent ability NOT included in the q-matrix \cr
+#'    }
+#'  }
+#' }
+#'
 #'
 #' @author Dave Rackham \email{ddrackham@gmail.com}
 #' @references \url{http://onlinelibrary.wiley.com/doi/10.1002/j.2333-8504.2008.tb02157.x/abstract}

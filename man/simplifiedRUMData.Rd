@@ -6,33 +6,29 @@
 \usage{
 simplifiedRUMData()
 }
-\arguments{
-\item{J}{Number of examinees}
-
-\item{jj}{Student for observation n}
-
-\item{I}{Number of items}
-
-\item{ii}{Item for observation n}
-
-\item{K}{Number of skills}
-
-\item{alphaK}{Skill mastery population proportion vector}
-
-\item{alphaJK}{Examinee skill mastery profile}
-
-\item{masteryJK}{Continuous probability of mastery}
-
-\item{x}{response matrix}
-
-\item{iParamsLow}{Matrix of item parameters for ideal low complexity model}
-
-\item{rStar}{Item discrimination r}
-
-\item{kappa}{Mastery threshold parameter}
-}
 \description{
 Creates response data for a simplified version of the RUM model using the Hartz Roussos Q matrix (Low)
+}
+\details{
+\section{\strong{Notation}}{
+ \describe{
+   \tabular{ll}{
+     JJ \tab Number of examinees \cr
+     II \tab Number of items \cr
+     KK \tab Number of skills \cr
+     j \tab Examinee j \cr
+     i \tab Item i \cr
+     k \tab Skill k \cr
+     alphaK \tab Skill mastery population proportion vector \cr
+     alphaJK \tab Examinee skill mastery profile \cr
+     x \tab response matrix \cr
+     pi \tab Probability that an examinee having mastered all the Q required skills for item i will correctly apply all the skills when solving item i \cr
+     iParamsLow \tab Matrix of item parameters for ideal low complexity model \cr
+     rStar \tab Item discrimination \cr
+     kappa \tab Mastery threshold parameter \cr
+   }
+ }
+}
 }
 \examples{
 data <- simplifiedRUMData()

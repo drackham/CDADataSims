@@ -6,37 +6,30 @@
 \usage{
 hartzRoussosData()
 }
-\arguments{
-\item{JJ}{Number of examinees}
-
-\item{j}{Examinee j}
-
-\item{II}{Number of items}
-
-\item{i}{Item i}
-
-\item{KK}{Number of skills}
-
-\item{k}{Skill k}
-
-\item{alphaK}{Skill mastery population proportion vector}
-
-\item{alphaJK}{Examinee skill mastery profile}
-
-\item{x}{response matrix}
-
-\item{pi}{Probability that an examinee having mastered all the Q required skills for item i will correctly apply all the skills when solving item i.}
-
-\item{iParamsLow}{Matrix of item parameters for ideal low complexity model}
-
-\item{r}{Item discrimination r}
-
-\item{c}{Item difficulty c}
-
-\item{eta}{Latent ability NOT included in the q-matrix}
-}
 \description{
 Simulates the Hartz Roussos data from "The Fusion Model for Skills Diagnosis: Blending Theory with Practicality" (2008)
+}
+\details{
+\section{\strong{Notation}}{
+ \describe{
+   \tabular{ll}{
+     JJ \tab Number of examinees \cr
+     II \tab Number of items \cr
+     KK \tab Number of skills \cr
+     j \tab Examinee j \cr
+     i \tab Item i \cr
+     k \tab Skill k \cr
+     alphaK \tab Skill mastery population proportion vector \cr
+     alphaJK \tab Examinee skill mastery profile \cr
+     x \tab response matrix \cr
+     pi \tab Probability that an examinee having mastered all the Q required skills for item i will correctly apply all the skills when solving item i \cr
+     iParamsLow \tab Matrix of item parameters for ideal low complexity model \cr
+     r \tab Item discrimination \cr
+     c \tab Item difficulty \cr
+     eta \tab Latent ability NOT included in the q-matrix \cr
+   }
+ }
+}
 }
 \examples{
 data <- hartzRoussosData()

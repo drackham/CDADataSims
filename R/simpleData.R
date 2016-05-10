@@ -2,18 +2,25 @@
 #'
 #' Creates response data for a simplified version of the RUM model using the Simple 2 Attribute Q matrix
 #'
-#' @param J Number of examinees
-#' @param jj Student for observation n
-#' @param I Number of items
-#' @param ii Item for observation n
-#' @param K Number of skills
-#' @param alphaK Skill mastery population proportion vector
-#' @param alphaJK Examinee skill mastery profile
-#' @param masteryJK Continuous probability of mastery
-#' @param x response matrix
-#' @param iParamsLow Matrix of item parameters for ideal low complexity model
-#' @param rStar Item discrimination r
-#' @param kappa Mastery threshold parameter
+#'\section{\strong{Notation}}{
+#'  \describe{
+#'    \tabular{ll}{
+#'      JJ \tab Number of examinees \cr
+#'      II \tab Number of items \cr
+#'      KK \tab Number of skills \cr
+#'      j \tab Examinee j \cr
+#'      i \tab Item i \cr
+#'      k \tab Skill k \cr
+#'      alphaK \tab Skill mastery population proportion vector \cr
+#'      alphaJK \tab Examinee skill mastery profile \cr
+#'      x \tab response matrix \cr
+#'      pi \tab Probability that an examinee having mastered all the Q required skills for item i will correctly apply all the skills when solving item i \cr
+#'      iParamsLow \tab Matrix of item parameters for ideal low complexity model \cr
+#'      rStar \tab Item discrimination \cr
+#'      kappa \tab Mastery threshold parameter \cr
+#'    }
+#'  }
+#' }
 #'
 #' @author Dave Rackham \email{ddrackham@gmail.com}
 #' @references \url{http://onlinelibrary.wiley.com/doi/10.1002/j.2333-8504.2008.tb02157.x/abstract}

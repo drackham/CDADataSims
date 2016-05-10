@@ -1,16 +1,22 @@
 #' RDINA data simulation
 #'
-#' Creates a response data for the RDINA model
+#' Creates response data for the RDINA model
 #'
-#' @param J Number of examinees
-#' @param jj Student for observation n
-#' @param I Number of items
-#' @param ii Item for observation n
-#' @param K Number of skills
-#'
+#' \section{\strong{Notation}}{
+#'  \describe{
+#'    \tabular{ll}{
+#'      q \tab Q-matrix \cr
+#'      I \tab Number of items \cr
+#'      K \tab Number of skills \cr
+#'      K \tab Number of examinees \cr
+#'      f \tab False alarm rate \cr
+#'      d \tab Item descrimination (detection) \cr
+#'    }
+#'  }
+#' }
 #'
 #' @author Dave Rackham \email{ddrackham@gmail.com}
-#' @references \url{http://onlinelibrary.wiley.com/doi/10.1002/j.2333-8504.2008.tb02157.x/abstract}
+#' @references \url{http://onlinelibrary.wiley.com/doi/10.1002/j.2333-8504.2008.tb02157.x/abstract} # TODO: Update
 #' @keywords q-matrix
 #'
 #' @examples
@@ -18,8 +24,6 @@
 #'
 #' @export
 
-# 30 items
-# 4 skills
 rDINA <- function(){
   set.seed(314159)
 
