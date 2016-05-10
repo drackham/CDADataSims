@@ -49,6 +49,6 @@ rDINA <- function(){
     }
   }
 
-  out <- list("I" = I, "J" = J, "K" = K, "N" = N, "resp" = resp, "alphaJK" = alphaJK)
+  out <- list("I" = I, "J" = J, "K" = K, "resp" = resp, "alphaJK" = alphaJK)
   return(out)
 }
