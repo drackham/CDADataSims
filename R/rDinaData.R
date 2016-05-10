@@ -20,7 +20,7 @@
 
 # 30 items
 # 4 skills
-rDina <- function(){
+rDINA <- function(){
   set.seed(314159)
 
   q <- simpleQ()
@@ -49,7 +49,6 @@ rDina <- function(){
     }
   }
 
-  out <- cbind(resp,alphaJK)
-
+  out <- list("I" = I, "J" = J, "K" = K, "N" = N, "resp" = resp, "alphaJK" = alphaJK)
   return(out)
 }
