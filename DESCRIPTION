@@ -1,6 +1,6 @@
 Package: CDADataSims
 Title: Cognitive Diagnostic Assessment Data Simulations
-Version: 0.0.0.9000
+Version: 0.0.1.0
 Authors@R: person("Dave", "Rackham", email = "ddrackham@gmail.com", role = c("aut", "cre"))
 Description: Simulate data sets for Cognitive Diagnostic Assessment models.
 Depends:
