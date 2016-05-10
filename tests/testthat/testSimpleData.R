@@ -2,7 +2,7 @@ context("Check the Simple data simulation for correctness")
 
 data <- simpleData()
 q <- simpleQ()
-J <- 500
+J <- 1000
 I <- 30
 K <- 2
 

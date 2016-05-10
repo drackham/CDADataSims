@@ -14,7 +14,7 @@
 #' @keywords q-matrix
 #'
 #' @examples
-#' data <- rDina()
+#' data <- rDINA()
 #'
 #' @export
 
