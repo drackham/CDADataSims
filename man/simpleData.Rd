@@ -9,8 +9,8 @@ simpleData()
 \description{
 Creates response data for a simplified version of the RUM model using the Simple 2 Attribute Q matrix
 }
-\details{
 \section{\strong{Notation}}{
+
  \describe{
    \tabular{ll}{
      JJ \tab Number of examinees \cr
@@ -28,7 +28,6 @@ Creates response data for a simplified version of the RUM model using the Simple
      kappa \tab Mastery threshold parameter \cr
    }
  }
-}
 }
 \examples{
 data <- simpleData()

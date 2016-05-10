@@ -2,7 +2,7 @@
 #'
 #' Creates response data for a simplified version of the RUM model using the Simple 2 Attribute Q matrix
 #'
-#'\section{\strong{Notation}}{
+#' @section \strong{Notation}:
 #'  \describe{
 #'    \tabular{ll}{
 #'      JJ \tab Number of examinees \cr
@@ -20,7 +20,6 @@
 #'      kappa \tab Mastery threshold parameter \cr
 #'    }
 #'  }
-#' }
 #'
 #' @author Dave Rackham \email{ddrackham@gmail.com}
 #' @references \url{http://onlinelibrary.wiley.com/doi/10.1002/j.2333-8504.2008.tb02157.x/abstract}

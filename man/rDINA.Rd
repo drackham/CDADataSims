@@ -9,8 +9,8 @@ rDINA()
 \description{
 Creates response data for the RDINA model
 }
-\details{
 \section{\strong{Notation}}{
+
  \describe{
    \tabular{ll}{
      q \tab Q-matrix \cr
@@ -21,7 +21,6 @@ Creates response data for the RDINA model
      d \tab Item descrimination (detection) \cr
    }
  }
-}
 }
 \examples{
 data <- rDINA()

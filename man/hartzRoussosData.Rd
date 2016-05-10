@@ -9,8 +9,8 @@ hartzRoussosData()
 \description{
 Simulates the Hartz Roussos data from "The Fusion Model for Skills Diagnosis: Blending Theory with Practicality" (2008)
 }
-\details{
 \section{\strong{Notation}}{
+
  \describe{
    \tabular{ll}{
      JJ \tab Number of examinees \cr
@@ -29,7 +29,6 @@ Simulates the Hartz Roussos data from "The Fusion Model for Skills Diagnosis: Bl
      eta \tab Latent ability NOT included in the q-matrix \cr
    }
  }
-}
 }
 \examples{
 data <- hartzRoussosData()

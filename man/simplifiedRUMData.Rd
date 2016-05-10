@@ -9,8 +9,8 @@ simplifiedRUMData()
 \description{
 Creates response data for a simplified version of the RUM model using the Hartz Roussos Q matrix (Low)
 }
-\details{
 \section{\strong{Notation}}{
+
  \describe{
    \tabular{ll}{
      JJ \tab Number of examinees \cr
@@ -28,7 +28,6 @@ Creates response data for a simplified version of the RUM model using the Hartz 
      kappa \tab Mastery threshold parameter \cr
    }
  }
-}
 }
 \examples{
 data <- simplifiedRUMData()

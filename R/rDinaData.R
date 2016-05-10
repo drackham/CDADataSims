@@ -2,7 +2,7 @@
 #'
 #' Creates response data for the RDINA model
 #'
-#' \section{\strong{Notation}}{
+#' @section \strong{Notation}:
 #'  \describe{
 #'    \tabular{ll}{
 #'      q \tab Q-matrix \cr
@@ -13,7 +13,6 @@
 #'      d \tab Item descrimination (detection) \cr
 #'    }
 #'  }
-#' }
 #'
 #' @author Dave Rackham \email{ddrackham@gmail.com}
 #' @references \url{http://onlinelibrary.wiley.com/doi/10.1002/j.2333-8504.2008.tb02157.x/abstract} # TODO: Update

@@ -2,7 +2,7 @@
 #'
 #' Simulates the Hartz Roussos data from "The Fusion Model for Skills Diagnosis: Blending Theory with Practicality" (2008)
 #'
-#' \section{\strong{Notation}}{
+#' @section \strong{Notation}:
 #'  \describe{
 #'    \tabular{ll}{
 #'      JJ \tab Number of examinees \cr
@@ -21,7 +21,6 @@
 #'      eta \tab Latent ability NOT included in the q-matrix \cr
 #'    }
 #'  }
-#' }
 #'
 #'
 #' @author Dave Rackham \email{ddrackham@gmail.com}
