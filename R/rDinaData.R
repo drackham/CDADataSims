@@ -49,7 +49,7 @@ rDINA <- function(){
   colnames(resp) <- seq(1:ncol(resp))
   for(i in 1:I){
     for(j in 1:J){
-      resp[i,j] <- f[i] + d[j]*prod((alphaJK[i,]^q[j,]))
+      resp[i,j] <- f[j] + d[j]*prod((alphaJK[i,]^q[j,]))
     }
   }
 
