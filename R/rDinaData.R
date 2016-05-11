@@ -27,7 +27,7 @@ rDINA <- function(){
   set.seed(314159)
 
   q <- simpleQ()
-  I <- 1000 # examinees
+  I <- 100 # examinees
   J <- nrow(q) # items
   K <- ncol(q) # skill
 
@@ -39,19 +39,19 @@ rDINA <- function(){
   alphaJK <- matrix(nrow = I, ncol = K)
   colnames(alphaJK) <- c("alpha1", "alpha2")
 
-  for (i in 1:100){
+  for (i in 1:10){
     alphaJK[i,] <- c(0,0)
   }
 
-  for (i in 101:400){
+  for (i in 11:40){
     alphaJK[i,] <- c(1,0)
   }
 
-  for (i in 401:700){
+  for (i in 41:70){
     alphaJK[i,]  <- c(0,1)
   }
 
-  for (i in 701:1000){
+  for (i in 71:100){
     alphaJK[i,] <- c(1,1)
   }
 
