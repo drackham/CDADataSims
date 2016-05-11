@@ -32,18 +32,27 @@ rDINA <- function(){
   K <- ncol(q) # skill
 
 
-  f <- rep(0, 30)
-  # d <- rep(1, 30)
-  d <- runif(30, min = .85, max = 1)
+  f <- runif(30, min = -4, max = -2.75)
+  d <- runif(30, min = 6, max = 8)
 
   # Generate mastery profiles
-  alphaK <- c(.7, .5)
   alphaJK <- matrix(nrow = I, ncol = K)
   colnames(alphaJK) <- c("alpha1", "alpha2")
-  for (i in 1:I){
-    for (k in 1:K){
-      alphaJK[i,k] <- rbinom(1,1,alphaK[k])
-    }
+
+  for (i in 1:100){
+    alphaJK[i,] <- c(0,0)
+  }
+
+  for (i in 101:400){
+    alphaJK[i,] <- c(1,0)
+  }
+
+  for (i in 401:700){
+    alphaJK[i,]  <- c(0,1)
+  }
+
+  for (i in 701:1000){
+    alphaJK[i,] <- c(1,1)
   }
 
   resp <- matrix(nrow = I, ncol = J) # respondents by items
@@ -51,7 +60,7 @@ rDINA <- function(){
   for(i in 1:I){
     for(j in 1:J){
       p <- f[j] + d[j]*prod((alphaJK[i,]^q[j,]))
-      resp[i,j] <- rbinom(1, 1, p)
+      resp[i,j] <- rbinom(1, 1, exp(p)/(1+exp(p)))
     }
   }
 
