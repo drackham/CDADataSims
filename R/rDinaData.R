@@ -6,9 +6,9 @@
 #'  \describe{
 #'    \tabular{ll}{
 #'      q \tab Q-matrix \cr
-#'      I \tab Number of items \cr
+#'      I \tab Number of examinees \cr
+#'      J \tab Number of items \cr
 #'      K \tab Number of skills \cr
-#'      K \tab Number of examinees \cr
 #'      f \tab False alarm rate \cr
 #'      d \tab Item descrimination (detection) \cr
 #'    }
@@ -27,28 +27,29 @@ rDINA <- function(){
   set.seed(314159)
 
   q <- simpleQ()
-  I <- nrow(q)
-  K <- ncol(q)
-  J <- 1000
+  I <- 1000 # examinees
+  J <- nrow(q) # items
+  K <- ncol(q) # skill
+
 
   f <- rep(0, 30)
   d <- rep(1, 30)
 
   # Generate mastery profiles
   alphaK <- c(.7, .5)
-  alphaJK <- matrix(nrow = J, ncol = K)
+  alphaJK <- matrix(nrow = I, ncol = K)
   colnames(alphaJK) <- c("alpha1", "alpha2")
-  for (j in 1:J){
+  for (i in 1:I){
     for (k in 1:K){
-      alphaJK[j,k] <- rbinom(1,1,alphaK[k])
+      alphaJK[i,k] <- rbinom(1,1,alphaK[k])
     }
   }
 
-  resp <- matrix(nrow = J, ncol = I) # respondents x items
+  resp <- matrix(nrow = I, ncol = J) # respondents x items
   colnames(resp) <- seq(1:ncol(resp))
-  for(j in 1:J){
-    for(i in 1:I){
-      resp[j,i] <- f[i] + (prod(d[i]*alphaJK[j,]))
+  for(i in 1:I){
+    for(j in 1:J){
+      resp[i,j] <- f[i] + d[j]*prod((alphaJK[i,]^q[j,]))
     }
   }
 
