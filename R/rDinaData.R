@@ -32,27 +32,27 @@ rDINA <- function(){
   K <- ncol(q) # skill
 
 
-  f <- runif(30, min = -4, max = -2.75)
-  d <- runif(30, min = 6, max = 8)
+  f <- runif(30, min = -5, max = -3.75)
+  d <- runif(30, min = 7, max = 9)
 
   # Generate mastery profiles
   alphaJK <- matrix(nrow = I, ncol = K)
   colnames(alphaJK) <- c("alpha1", "alpha2")
 
   for (i in 1:10){
-    alphaJK[i,] <- c(0,0)
+    alphaJK[i,] <- c(0.02,0.02)
   }
 
   for (i in 11:40){
-    alphaJK[i,] <- c(1,0)
+    alphaJK[i,] <- c(0.95,0.02)
   }
 
   for (i in 41:70){
-    alphaJK[i,]  <- c(0,1)
+    alphaJK[i,]  <- c(0.02,.95)
   }
 
   for (i in 71:100){
-    alphaJK[i,] <- c(1,1)
+    alphaJK[i,] <- c(.95,.95)
   }
 
   resp <- matrix(nrow = I, ncol = J) # respondents by items
