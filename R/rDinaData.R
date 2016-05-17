@@ -39,19 +39,19 @@ rDINA <- function(){
   alphaJK <- matrix(nrow = I, ncol = K)
   colnames(alphaJK) <- c("alpha1", "alpha2")
 
-  for (i in 1:10){
+  for (i in 1:100){
     alphaJK[i,] <- c(0.02,0.02)
   }
 
-  for (i in 11:40){
+  for (i in 101:400){
     alphaJK[i,] <- c(0.95,0.02)
   }
 
-  for (i in 41:70){
+  for (i in 401:700){
     alphaJK[i,]  <- c(0.02,.95)
   }
 
-  for (i in 71:100){
+  for (i in 701:1000){
     alphaJK[i,] <- c(.95,.95)
   }
 
