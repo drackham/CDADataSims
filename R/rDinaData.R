@@ -27,7 +27,7 @@ rDINA <- function(){
   set.seed(314159)
 
   q <- simpleQ()
-  I <- 100 # examinees
+  I <- 1000 # examinees
   J <- nrow(q) # items
   K <- ncol(q) # skill
 
