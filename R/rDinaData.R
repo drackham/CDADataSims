@@ -31,7 +31,6 @@ rDINA <- function(I){
   J <- nrow(q) # items
   K <- ncol(q) # skill
 
-
   f <- runif(30, min = -5, max = -3.75)
   d <- runif(30, min = 7, max = 9)
 
