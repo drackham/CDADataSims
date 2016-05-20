@@ -19,6 +19,7 @@
 #' @keywords q-matrix
 #'
 #' @export
+library(boot)
 
 rDINA <- function(I){
   set.seed(314159)
