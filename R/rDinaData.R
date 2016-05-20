@@ -40,20 +40,20 @@ rDINA <- function(I){
 
   breaks <- c(I*.1,I*.4,I*.7,I)
 
-  for (i in 1:breaks[1]){
-    alphaJK[i,] <- c(0.02,0.02)
+  for (i in 1:breaks[1]){  # 100
+    alphaJK[i,] <- c(0,0)
   }
 
-  for (i in (1+breaks[1]):breaks[2]){
-    alphaJK[i,] <- c(0.95,0.02)
+  for (i in (1+breaks[1]):breaks[2]){ # 101-400
+    alphaJK[i,] <- c(1,0)
   }
 
-  for (i in (1+breaks[2]):breaks[3]){
-    alphaJK[i,]  <- c(0.02,.95)
+  for (i in (1+breaks[2]):breaks[3]){ # 401 - 700
+    alphaJK[i,]  <- c(0,1)
   }
 
-  for (i in (1+breaks[3]):breaks[4]){
-    alphaJK[i,] <- c(.95,.95)
+  for (i in (1+breaks[3]):breaks[4]){ # 701 - 1000
+    alphaJK[i,] <- c(1,1)
   }
 
   resp <- matrix(nrow = I, ncol = J) # respondents by items
