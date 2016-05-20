@@ -24,7 +24,7 @@
 #' @export
 
 rDINASimpleQDataAnalysis <- function(data, q){
-
+  y <- data$resp
   skill1 <- q[,1]
   skill2 <- q[,2]
   f <- round( data$f, 3)
