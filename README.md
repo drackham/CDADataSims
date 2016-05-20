@@ -42,4 +42,4 @@ Dave Rackham ddrackham@gmail.com
 
 ## License
 
-TBD
+MIT License (see License.txt)
