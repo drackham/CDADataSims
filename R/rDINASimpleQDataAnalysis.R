@@ -1,6 +1,6 @@
 #' RDINA Simple Q Data Analysis
 #'
-#' Creates a data analysis data frame that can be used to inspect the integrity of the data simulation
+#' Creates a data frame that can be used to inspect the integrity of the data simulation
 #'
 #' @section \strong{Notation}:
 #'  \describe{

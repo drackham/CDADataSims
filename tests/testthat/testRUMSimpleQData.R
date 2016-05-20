@@ -1,6 +1,6 @@
-context("Check the Simple data simulation for correctness")
+context("Check the RUM Simple Q matrix data simulation for correctness")
 
-data <- simpleData()
+data <- RUMSimpleQData()
 q <- simpleQ()
 J <- 1000
 I <- 30

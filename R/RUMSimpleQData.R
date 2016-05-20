@@ -1,6 +1,11 @@
-#' Simplified data simulation
+#' RUM Simple Q matrix data simulation
 #'
 #' Creates response data for a simplified version of the RUM model using the Simple 2 Attribute Q matrix
+#'
+#' #' @section \strong{Important notes}:
+#' \describe{
+#'  As of 5-20-2016 I am unsure if the data simulation algorithm is accurate or effective. I abandoned this model in favor for the R-DINA.
+#' }
 #'
 #' @section \strong{Notation}:
 #'  \describe{
@@ -26,11 +31,11 @@
 #' @keywords q-matrix
 #'
 #' @examples
-#' data <- simpleData()
+#' data <- RUMSimpleQData()
 #'
 #' @export
 
-simpleData <- function(){
+RUMSimpleQData <- function(){
   set.seed(314159)
 
   kappa <- .6
@@ -44,7 +49,7 @@ simpleData <- function(){
   alphaJK <- matrix(nrow = J, ncol = K)
   for (j in 1:J){
     for (k in 1:K){
-      alphaJK[j,k] <- rbinom(1,1,alphaK[k])
+      alphaJK[j,k] <- stats::rbinom(1,1,alphaK[k])
     }
   }
 
@@ -54,10 +59,10 @@ simpleData <- function(){
   for (j in 1:J){
     for(k in 1:K){
       if(alphaJK[j,k]==0){
-        masteryJK[j,k] <- rbeta(1,2,30)
+        masteryJK[j,k] <- stats::rbeta(1,2,30)
       }
       else{
-        masteryJK[j,k] <- rbeta(1,20,2)
+        masteryJK[j,k] <- stats::rbeta(1,20,2)
       }
     }
   }
@@ -97,7 +102,7 @@ simpleData <- function(){
   iParamsLow[29,] <-  c(0.13, 0.16)
   iParamsLow[30,] <-  c(0.32, 0.18)
 
-  pi <- runif(30,0.85,.99)
+  pi <- stats::runif(30,0.85,.99)
 
   probCorrect <- matrix (nrow=I, ncol=J)
   for (i in 1:I){ # items
@@ -112,7 +117,7 @@ simpleData <- function(){
   xMat <- matrix (nrow=I, ncol=J)
   for (i in 1:I){
     for (j in 1:J){
-      xMat[i,j] <- rbinom(1,1,probCorrect[i,j])
+      xMat[i,j] <- stats::rbinom(1,1,probCorrect[i,j])
     }
   }
 

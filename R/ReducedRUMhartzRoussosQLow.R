@@ -1,4 +1,4 @@
-#' Simplified RUM data simulation
+#' Reduced RUM Hartz Roussos Q matrix (low) data simulation
 #'
 #' Creates response data for a simplified version of the RUM model using the Hartz Roussos Q matrix (Low)
 #'
@@ -26,11 +26,11 @@
 #' @keywords q-matrix hartz roussos
 #'
 #' @examples
-#' data <- simplifiedRUMData()
+#' data <- ReducedRUMhartzRoussosQLow()
 #'
 #' @export
 
-simplifiedRUMData <- function(){
+ReducedRUMhartzRoussosQLow <- function(){
   set.seed(314159)
 
   kappa <- .6
@@ -45,7 +45,7 @@ simplifiedRUMData <- function(){
   alphaJK <- matrix(nrow = J, ncol = K)
   for (j in 1:J){
     for (k in 1:K){
-      alphaJK[j,k] <- rbinom(1,1,alphaK[k])
+      alphaJK[j,k] <- stats::rbinom(1,1,alphaK[k])
     }
   }
 
@@ -68,10 +68,10 @@ simplifiedRUMData <- function(){
 #     }
     for(k in 1:K){
       if(alphaJK[j,k]==0){
-        masteryJK[j,k] <- rbeta(1,2,30)
+        masteryJK[j,k] <- stats::rbeta(1,2,30)
       }
       else{
-        masteryJK[j,k] <- rbeta(1,20,2)
+        masteryJK[j,k] <- stats::rbeta(1,20,2)
       }
     }
   }
@@ -142,7 +142,7 @@ simplifiedRUMData <- function(){
   xMat <- matrix (nrow=I, ncol=J)
   for (i in 1:I){
     for (j in 1:J){
-      xMat[i,j] <- rbinom(1,1,probCorrect[i,j])
+      xMat[i,j] <- stats::rbinom(1,1,probCorrect[i,j])
     }
   }
 

@@ -6,8 +6,17 @@
 \usage{
 rDINAHartzRoussosQ(I)
 }
+\arguments{
+\item{I}{Number of examinees}
+}
 \description{
 Creates response data for the RDINA model and the Hartz Roussos Q-matrix (low)
+}
+\details{
+#' @section \strong{Important notes}:
+\describe{
+ As of 5-20-2016 I am unsure if the data simulation algorithm is accurate or effective. It needs to be connected to the simpleQ algorithm.
+}
 }
 \section{\strong{Notation}}{
 

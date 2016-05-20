@@ -1,6 +1,11 @@
-#' Hartz Roussos (2008) Data simulation
+#' RUM Hartz Roussos (2008) Data simulation
 #'
 #' Simulates the Hartz Roussos data from "The Fusion Model for Skills Diagnosis: Blending Theory with Practicality" (2008)
+#'
+#' @section \strong{Important notes}:
+#' \describe{
+#'  As of 5-20-2016 I am unsure if the data simulation algorithm is accurate or effective. I abandoned this model in favor for the R-DINA.
+#' }
 #'
 #' @section \strong{Notation}:
 #'  \describe{
@@ -22,16 +27,18 @@
 #'    }
 #'  }
 #'
+
 #'
 #' @author Dave Rackham \email{ddrackham@gmail.com}
 #' @references \url{http://onlinelibrary.wiley.com/doi/10.1002/j.2333-8504.2008.tb02157.x/abstract}
 #' @keywords hartz roussos
 #'
 #' @examples
-#' data <- hartzRoussosData()
+#' data <- RUMhartzRoussosData()
+#'
 #' @export
 
-hartzRoussosData <- function(){
+RUMhartzRoussosData <- function(){
   set.seed(314159)
 
   JJ <- 1500
@@ -44,7 +51,7 @@ hartzRoussosData <- function(){
 
   for (j in 1:JJ){
     for (k in 1:KK){
-      alphaJK[j,k] <- rbinom(1,1,alphaK[k])
+      alphaJK[j,k] <- stats::rbinom(1,1,alphaK[k])
     }
   }
 
@@ -121,7 +128,7 @@ hartzRoussosData <- function(){
   y <- matrix (nrow=JJ, ncol=II)
   for (j in 1:JJ){
     for (i in 1:II){
-      y[j,i] <- rbinom(1,1,probCorrect[j,i])
+      y[j,i] <- stats::rbinom(1,1,probCorrect[j,i])
     }
   }
 

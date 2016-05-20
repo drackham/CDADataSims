@@ -1,6 +1,6 @@
 context("Check the Simplified RUM data simulation for correctness")
 
-data <- simplifiedRUMData()
+data <- ReducedRUMhartzRoussosQLow()
 q <- hartzRoussosQLow()
 J <- 5000
 I <- 40

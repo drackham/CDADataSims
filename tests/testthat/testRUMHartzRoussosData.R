@@ -1,6 +1,6 @@
-context("Check the Hartz Roussos data simulation for correctness")
+context("Check the RUM Hartz Roussos data simulation for correctness")
 
-data <- hartzRoussosData()
+data <- RUMhartzRoussosData()
 q <- hartzRoussosQLow()
 JJ <- 1500
 II <- 40
