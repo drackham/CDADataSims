@@ -4,7 +4,7 @@
 \alias{rDINA}
 \title{RDINA data simulation}
 \usage{
-rDINA()
+rDINA(I)
 }
 \description{
 Creates response data for the RDINA model
@@ -14,16 +14,16 @@ Creates response data for the RDINA model
  \describe{
    \tabular{ll}{
      q \tab Q-matrix \cr
-     I \tab Number of items \cr
+     I \tab Number of examinees \cr
+     J \tab Number of items \cr
      K \tab Number of skills \cr
-     K \tab Number of examinees \cr
      f \tab False alarm rate \cr
      d \tab Item descrimination (detection) \cr
    }
  }
 }
 \examples{
-data <- rDINA()
+data <- rDINA(500)
 
 }
 \author{

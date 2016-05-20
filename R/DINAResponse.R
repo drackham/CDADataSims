@@ -18,9 +18,6 @@
 #' @references \url{http://onlinelibrary.wiley.com/doi/10.1002/j.2333-8504.2008.tb02157.x/abstract} # TODO: Update
 #' @keywords q-matrix
 #'
-#' @examples
-#' data <- DINAResponse()
-#'
 #' @export
 #'
 
@@ -34,5 +31,5 @@ DINAResponse <- function(alpha,q,f,d){
   return(resp)
 }
 
-DINAResponse(c(0.98,0.05),q,f,d)
+# DINAResponse(c(0.98,0.05),q,f,d)
 

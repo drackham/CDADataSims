@@ -19,7 +19,7 @@
 #' @keywords q-matrix
 #'
 #' @examples
-#' data <- rDINA()
+#' data <- rDINA(500)
 #'
 #' @export
 
