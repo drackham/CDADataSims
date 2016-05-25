@@ -1,8 +1,8 @@
-Package: CDADataSims
-Title: Cognitive Diagnostic Assessment Data Simulations
-Version: 0.2.0
+Package: dcmdata
+Title: Diagnostic Classification Model Data Simulations
+Version: 0.3.0
 Authors@R: person("Dave", "Rackham", email = "ddrackham@gmail.com", role = c("aut", "cre"))
-Description: Simulates data sets for Cognitive Diagnostic Assessment models.
+Description: Simulates data sets for Diagnostic Classification models.
 Depends:
     R (>= 3.2.2)
 License: GPL-3

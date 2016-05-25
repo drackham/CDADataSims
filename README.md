@@ -1,9 +1,9 @@
 ## Master
-[![Travis-CI Build Status](https://travis-ci.org/drackham/CDADataSims.svg?branch=master)](https://travis-ci.org/drackham/CDADataSims)
+[![Travis-CI Build Status](https://travis-ci.org/drackham/dcmdata.svg?branch=master)](https://travis-ci.org/drackham/CDADataSims)
 
 ## Develop
-[![Travis-CI Build Status](https://travis-ci.org/drackham/CDADataSims.svg?branch=develop)](https://travis-ci.org/drackham/CDADataSims)
-[![codecov.io](https://codecov.io/github/drackham/CDADataSims/coverage.svg?branch=develop)](https://codecov.io/github/drackham/CDADataSims?branch=develop)
+[![Travis-CI Build Status](https://travis-ci.org/drackham/dcmdata.svg?branch=develop)](https://travis-ci.org/drackham/CDADataSims)
+[![codecov.io](https://codecov.io/github/drackham/dcmdata/coverage.svg?branch=develop)](https://codecov.io/github/drackham/CDADataSims?branch=develop)
 
 ## Synopsis
 

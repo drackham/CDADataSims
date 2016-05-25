@@ -1,4 +1,4 @@
 library(testthat)
-library(CDADataSims)
+library(dcmdata)
 
-test_check("CDADataSims")
+test_check("dcmdata")
