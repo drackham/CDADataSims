@@ -11,6 +11,7 @@
 #'      K \tab Number of skills \cr
 #'      f \tab False alarm rate \cr
 #'      d \tab Item descrimination (detection) \cr
+#'      type \tab simulation type (low_noise, high_noise, uninformative) \cr
 #'    }
 #'  }
 #'
@@ -22,16 +23,32 @@
 #'
 #' @export
 
-rDINASimpleQ <- function(I){
-  set.seed(314159)
-
-  q <- simpleQ()
-  I <- I # examinees
-  J <- nrow(q) # items
-  K <- ncol(q) # skill
-
-  f <- stats::runif(30, min = -5, max = -3.75)
-  d <- stats::runif(30, min = 7, max = 9)
+rDINASimpleQ <- function(I, type){
+	set.seed(314159)
+	
+	q <- simpleQ()
+	I <- I # examinees
+	J <- nrow(q) # items
+	K <- ncol(q) # skill
+	
+	# specify d and f according to the type of data simulation
+	switch(type, 
+  			 low_noise = {
+					f <- stats::runif(J, min = -5, max = -3.75)
+					d <- stats::runif(J, min = 7, max = 9)
+  			 },
+  			 high_noise = {
+  			 	f <- stats::runif(J, min = -1, max = 1)
+  			 	d <- stats::runif(J, min = 1, max = 1)  			 	
+  			 },
+  			 # no variance in item characteristics with lots of noise
+				 uninformative = {
+  			 	f <- rep(-1, times = J)
+  			 	d <- rep(1, times = J)
+  			 })
+	
+  g <- boot::inv.logit(f) # guess
+  s <- 1 - boot::inv.logit(f + d) # slip
 
   # Generate mastery profiles
   alphaIK <- matrix(nrow = I, ncol = K)
@@ -94,6 +111,7 @@ rDINASimpleQ <- function(I){
     }
   }
 
-  out <- list("I" = I, "J" = J, "K" = K, "resp" = resp, "alphaIK" = alphaIK, "f" = f, "d" = d)
+  out <- list("I" = I, "J" = J, "K" = K, "resp" = resp, "alphaIK" = alphaIK, "f" = f, "d" = d, "g" = g, 
+  						"s" = s)
   return(out)
 }
